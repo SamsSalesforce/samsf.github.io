@@ -1,0 +1,4 @@
+# Ignore common files (add more as needed)
+node_modules/
+.DS_Store
+.vscode/
