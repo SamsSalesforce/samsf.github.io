@@ -1,0 +1,36 @@
+# samsf — Test Website
+
+This repository contains a simple static site named "samsf" intended for testing GitHub Pages, link checks, forms, and basic client-side features.
+
+Contents
+- index.html — single-page site
+- assets/styles.css — minimal styling
+- .github/workflows/pages.yml — GitHub Actions workflow to auto-deploy to Pages
+
+Quick start — create and push a new repo
+1. Create a new repository on GitHub named `samsf` (or any name you prefer).
+   - If you want a project site visible at https://<username>.github.io/samsf, name the repo `samsf` and use the Pages workflow below.
+   - If you want a user site (yourusername.github.io), create a repo named `<yourusername>.github.io` and put these files at the repository root.
+
+2. Locally:
+   git clone <repo_url>
+   cd samsf
+   (add the files from this repo)
+   git add .
+   git commit -m "Initial samsf test site"
+   git push -u origin main
+
+Auto-deploy with GitHub Actions
+- The workflow at `.github/workflows/pages.yml` uses the official GitHub Pages actions. On push to `main` the workflow packages the repository content and deploys it to Pages. No secrets are required.
+
+Viewing
+- After the workflow runs, your site will be available at:
+  - Project site: https://<username>.github.io/samsf
+  - User site (if repo is username.github.io): https://<username>.github.io
+
+Testing
+- The site includes a small demo that saves entries to localStorage. Use this to verify client-side behavior and persistence.
+- Edit index.html and push to main; the workflow will redeploy automatically.
+
+Support
+- Open an issue in the repo if you want changes, additional features (example contact backend, sample API, or form integrations), or help configuring Pages.
